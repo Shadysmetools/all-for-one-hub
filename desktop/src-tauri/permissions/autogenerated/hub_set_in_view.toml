@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-hub-set-in-view"
+description = "Enables the hub_set_in_view command without any pre-configured scope."
+commands.allow = ["hub_set_in_view"]
+
+[[permission]]
+identifier = "deny-hub-set-in-view"
+description = "Denies the hub_set_in_view command without any pre-configured scope."
+commands.deny = ["hub_set_in_view"]

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One</title>
+  </head>
+  <body class="expanded tab-team muted">
+    <div id="app">
+      <button id="btn-override" type="button">Unmute anyway</button>
+      <div id="mic-ind" role="status" aria-live="polite"><i aria-hidden="true"></i><b id="mic-ind-text">Mic off</b></div>
+      <header id="titlebar" data-tauri-drag-region>
+        <span class="title" data-tauri-drag-region>One</span>
+        <div class="seg sm" id="tabs" role="group" aria-label="Screen">
+          <button id="tab-team" aria-pressed="true" title="Who is waiting on whom">Team</button>
+          <button id="tab-tickets" aria-pressed="false" title="Tickets and approvals from the hub" data-tour="tickets-tab">Tickets</button>
+          <button id="tab-voice" aria-pressed="false" title="Chat and talk with One">Chat with One</button>
+        </div>
+        <button id="btn-shrink" title="Make One small (a floating orb)" aria-label="Make One small">&#8600; <span id="shrink-label">Small</span></button>
+      </header>
+
+      <section id="orb-wrap" data-tauri-drag-region>
+        <canvas id="orb" width="400" height="400" data-tauri-drag-region></canvas>
+        <button id="btn-expand" title="Open the full window" aria-label="Open the full window" class="mini-only">&#8599;</button>
+      </section>
+
+      <section id="team" aria-label="Team"></section>
+      <section id="tickets" aria-label="Tickets"></section>
+
+      <section id="panel">
+        <div id="status" role="status"></div>
+        <div id="transcript" aria-live="polite">
+          <div id="typing" class="bubble one typing" hidden>One is thinking&hellip;</div>
+          <div id="cards"></div>
+        </div>
+        <form id="composer" autocomplete="off">
+          <textarea id="msg" rows="2" placeholder="Type your message here" aria-label="Message to One"></textarea>
+          <button id="btn-mute" type="button" class="talk" title="Turn the microphone on or off">Talk to One</button>
+          <button id="btn-stop" type="button" title="Stop One talking or thinking" hidden>Stop</button>
+          <button id="btn-send" type="submit" title="Send (Enter)">Send</button>
+        </form>
+        <div id="composer-hint">Enter sends. Shift+Enter starts a new line. <span id="latency" title="How fast One started answering"></span></div>
+        <details id="more">
+          <summary id="more-label">Sound and more</summary>
+          <div class="row">
+            <label>Mic <select id="mic"></select></label>
+            <label>Voice <select id="voice"></select></label>
+            <button id="btn-test-voice" type="button" title="Play a short sentence so you can check your speakers">Test my voice</button>
+          </div>
+          <div class="row">
+            <label title="The voice One uses when you speak Arabic">Arabic voice <select id="voice-ar"></select></label>
+            <button id="btn-test-voice-ar" type="button" title="Play a short Arabic sentence">Test Arabic voice</button>
+          </div>
+          <div class="row">
+            <label title="Pick another work session and ask One about it. One only reads it."><span id="session-label">Ask about a teammate's work</span> <select id="session"></select></label>
+            <button id="btn-pin" type="button" title="Keep this session as the default until it stops being live">Pin</button>
+            <span id="route-note" class="note" dir="auto"></span>
+          </div>
+        </details>
+      </section>
+    </div>
+    <div id="toasts" role="alert" aria-live="assertive"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

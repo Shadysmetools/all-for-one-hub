@@ -1,0 +1,47 @@
+fn main() {
+    // Deny-by-default IPC: only the commands listed here exist for the webview,
+    // and each must be granted explicitly in capabilities/default.json.
+    tauri_build::try_build(
+        tauri_build::Attributes::new().app_manifest(
+            tauri_build::AppManifest::new().commands(&[
+                "list_voices",
+                "get_settings",
+                "save_settings",
+                "run_turn",
+                "approve_tool",
+                "deny_tool",
+                "cancel_turn",
+                "set_mode",
+                "key_status",
+                "team_load",
+                "team_set_done",
+                "team_remind",
+                "get_team_prefs",
+                "set_team_prefs",
+                "mic_start",
+                "mic_frames",
+                "mic_set_muted",
+                "mic_set_barge",
+                "list_sessions",
+                "focus_session",
+                "history_get",
+                "open_link",
+                "lock_state",
+                "test_voice",
+                "get_mode",
+                "mic_state",
+                "mic_set_ptt",
+                "new_session",
+                "hub_snapshot",
+                "hub_refresh",
+                "hub_ticket",
+                "hub_open_approval",
+                "hub_set_in_view",
+                "hub_nudge",
+                "session_route",
+                "session_pin",
+            ]),
+        ),
+    )
+    .expect("tauri build failed");
+}

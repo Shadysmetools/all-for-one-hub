@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability (private)
+    url: https://github.com/Shadysmetools/all-for-one-hub/security/advisories/new
+    about: Please report security issues privately here, never as a public issue.
+  - name: Questions and ideas
+    url: https://github.com/Shadysmetools/all-for-one-hub/discussions
+    about: Ask usage questions and discuss ideas in GitHub Discussions.

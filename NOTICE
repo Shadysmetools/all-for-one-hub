@@ -1,0 +1,11 @@
+All for One
+Copyright 2026 SMEtools and the All for One contributors
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+"All for One" and the All for One logo are trademarks reserved by SMEtools.
+The Apache License does not grant permission to use these marks; see TRADEMARK.md.
+
+This repository contains the open-source core of All for One, including the
+experimental "One" desktop app in desktop/. A hosted service, custom
+integrations and support are offered separately.

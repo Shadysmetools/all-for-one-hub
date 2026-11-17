@@ -1,0 +1,108 @@
+/* Theme variables (light and dark). Team board and voice panel both use them. */
+:root {
+  --bg: #f6f4ef; --surface: #ffffff; --ink: #0b1b3a; --muted: #475473; --line: #ddd8cc; --soft: #eef2fa;
+  --accent: #1f6fd6; --accent-ink: #ffffff; --accent-soft: #e3eefc; --teal: #0b7f74; --teal-soft: #ddf4f0;
+  --warn: #8a4b00; --warn-soft: #fff0d2; --ok: #136b3a; --link: #1f6fd6; --you: #1f6fd6;
+  --shadow: 0 1px 2px rgba(11, 27, 58, 0.08), 0 6px 20px rgba(11, 27, 58, 0.06);
+  color-scheme: light;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+:root[data-theme='dark'] {
+  --bg: #071226; --surface: #0e2044; --ink: #e9f0fd; --muted: #a3b5da; --line: #22396b; --soft: #142a56;
+  --accent-soft: #16305f; --teal: #2dd4bf; --teal-soft: #0e3a3f;
+  --warn: #ffc468; --warn-soft: #3a2c0c; --ok: #5ee0a0; --link: #8dbbff; --you: #8dbbff;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.35);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: transparent; overflow: hidden; user-select: none; }
+body.expanded #app { background: var(--bg); } /* the full window has its own frame */
+#app { height: 100%; display: flex; flex-direction: column; color: var(--ink); }
+canvas { width: 100%; height: 100%; display: block; }
+button, select { background: var(--soft); color: inherit; border: 1px solid var(--line); border-radius: 6px; padding: 4px 10px; font: inherit; cursor: pointer; }
+button:hover { background: var(--accent-soft); }
+
+#titlebar { display: flex; align-items: center; gap: 12px; padding: 6px 10px; }
+#titlebar .title { flex: 1; font-weight: 600; }
+body.mini #titlebar, body.mini #panel, body.mini #team, body.mini #tickets { display: none; }
+body.expanded .mini-only { display: none; }
+#orb-wrap { position: relative; flex: 0 0 auto; }
+body.mini #orb-wrap { flex: 1; }
+body.expanded #orb-wrap { height: 220px; }
+.mini-only { position: absolute; right: 8px; top: 8px; opacity: 0; transition: opacity .15s; }
+#orb-wrap:hover .mini-only { opacity: 1; }
+
+/* Team is the home tab; One (voice) is the other. The mic keeps listening on both. */
+body.expanded.tab-team #orb-wrap, body.expanded.tab-team #panel { display: none; }
+body:not(.tab-team) #team { display: none; }
+body.expanded.tab-tickets #orb-wrap, body.expanded.tab-tickets #panel { display: none; }
+body:not(.tab-tickets) #tickets { display: none; }
+
+.badge { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; opacity: .85; }
+.badge i { width: 8px; height: 8px; border-radius: 50%; background: #667; }
+.badge.on i { background: #2ecc71; box-shadow: 0 0 6px #2ecc71; }
+body.muted .badge i { background: #e74c3c; }
+
+#panel { flex: 1; display: flex; flex-direction: column; gap: 8px; padding: 8px 12px 12px; min-height: 0; user-select: text; }
+#status { min-height: 1.2em; font-size: 13.5px; color: var(--warn); }
+#toasts { position: fixed; inset-inline: 12px; bottom: 12px; z-index: 50; display: flex; flex-direction: column; gap: 6px; pointer-events: none; }
+#toasts .toast { background: #c0392b; color: #fff; border-radius: 8px; padding: 10px 14px; font-size: 14px; font-weight: 600; overflow-wrap: anywhere; pointer-events: auto; }
+#toasts .toast.ok { background: #1e8449; }
+#toasts .toast.note { background: #34495e; font-weight: 500; }
+#transcript { flex: 1; overflow-y: auto; font-size: 15.5px; line-height: 1.5; display: flex; flex-direction: column; gap: 8px; padding: 4px 2px; }
+/* Chat bubbles: you on the right, One on the left (mirrored in right-to-left layouts). */
+#transcript .bubble { max-width: 82%; padding: 8px 12px; border-radius: 14px; line-height: 1.45; overflow-wrap: anywhere; user-select: text; }
+#transcript .bubble.you { align-self: flex-end; background: var(--you); color: #fff; border-end-end-radius: 4px; white-space: pre-wrap; }
+:root[data-theme='dark'] #transcript .bubble.you { color: #071226; }
+#transcript .bubble.one { align-self: flex-start; background: var(--soft); color: var(--ink); border-end-start-radius: 4px; }
+#transcript .bubble.typing { opacity: .7; font-style: italic; }
+#transcript .bubble.interrupted { opacity: .6; }
+/* what the user is saying right now: live, not final */
+#transcript .bubble.partial { opacity: .65; font-style: italic; }
+#latency { margin-left: .75em; opacity: .75; }
+#latency.slow { color: #c77700; }
+#transcript .bubble p { margin: 0 0 6px; }
+#transcript .bubble p:last-child, #transcript .bubble ul:last-child, #transcript .bubble ol:last-child { margin-bottom: 0; }
+#transcript .bubble ul, #transcript .bubble ol { margin: 0 0 6px; padding-inline-start: 1.4em; }
+#transcript .bubble .md-code { font: 12.5px Consolas, 'Cascadia Mono', monospace; background: rgba(127,127,127,.18); padding: 1px 5px; border-radius: 4px; }
+#transcript .bubble .md-block { position: relative; margin: 6px 0; }
+#transcript .bubble .md-block pre { margin: 0; padding: 10px; border-radius: 8px; background: var(--surface); color: var(--ink); border: 1px solid var(--line); overflow: auto; max-height: 16em; font: 12.5px/1.4 Consolas, 'Cascadia Mono', monospace; }
+#transcript .bubble .md-copy { position: absolute; inset-block-start: 4px; inset-inline-end: 4px; font-size: 11px; padding: 1px 8px; opacity: .85; }
+#transcript .bubble .md-link { color: inherit; text-decoration: underline; cursor: pointer; }
+#transcript .bubble .md-host { opacity: .75; font-size: 12px; }
+#transcript .bubble .md-more { font-size: 12px; padding: 2px 10px; }
+#toasts .toast.confirm { display: flex; gap: 10px; align-items: center; }
+#composer { display: flex; gap: 8px; align-items: flex-end; }
+#composer textarea { flex: 1; resize: none; font: inherit; padding: 8px 10px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); max-height: 9em; }
+#composer { align-items: stretch; }
+#composer button { min-height: 44px; padding: 8px 18px; border-radius: 12px; font-weight: 600; }
+#composer #btn-send { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+#composer:has(textarea:placeholder-shown) #btn-send { opacity: .55; }
+#composer #btn-mute.on { background: var(--teal); color: #fff; border-color: var(--teal); }
+#composer-hint { font-size: 12.5px; opacity: .7; margin: 2px 2px 0; }
+#more summary { cursor: pointer; font-size: 14px; padding: 6px 2px; opacity: .85; }
+#more .row { margin-top: 6px; }
+body.expanded #titlebar .title { visibility: hidden; }
+.card { border: 1px solid var(--warn); border-radius: 8px; padding: 8px; margin: 4px 0; display: flex; flex-direction: column; gap: 6px; }
+.card code { font-size: 12px; word-break: break-all; color: var(--ink); }
+.card .cmd { margin: 0; font: 12px/1.4 Consolas, 'Cascadia Mono', monospace; white-space: pre-wrap; overflow-wrap: anywhere; max-height: 14em; overflow: auto; padding: 6px; border-radius: 6px; background: var(--soft); color: var(--ink); }
+.card .warn { color: #fff; background: #c0392b; border-radius: 6px; padding: 6px 8px; font-size: 12px; font-weight: 600; }
+.card .why { font-size: 14px; color: var(--warn); }
+.row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.row label { font-size: 14px; display: flex; gap: 4px; align-items: center; }
+
+/* Mic state, visible in the full and the mini window. Red dot and a bigger pill while live. */
+#mic-ind { position: fixed; left: 50%; transform: translateX(-50%); z-index: 5; display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; border-radius: 999px; font-size: 13px; font-weight: 600; background: var(--soft); color: var(--muted); border: 1px solid var(--line); pointer-events: none; white-space: nowrap; }
+#mic-ind i { width: 10px; height: 10px; border-radius: 50%; background: #667; }
+#mic-ind.live { background: #c0392b; border-color: #c0392b; color: #fff; font-size: 15px; padding: 6px 16px; }
+#mic-ind.live i { background: #fff; box-shadow: 0 0 8px #fff; animation: mic-pulse 1.2s ease-in-out infinite; }
+@keyframes mic-pulse { 50% { opacity: .35; } }
+body.expanded #mic-ind { top: 6px; }
+#btn-override { display: none; position: fixed; left: 50%; transform: translateX(-50%); z-index: 6; font-weight: 600; }
+body.call-blocked #btn-override { display: block; }
+body.expanded #btn-override { top: 40px; }
+body.mini #btn-override { bottom: 40px; font-size: 12px; padding: 2px 8px; }
+body.mini #mic-ind { bottom: 8px; }
+/* Right-to-left (Arabic): the flex rows mirror by themselves; keep the corner button on the start side. */
+[dir='rtl'] .mini-only { right: auto; left: 8px; }
+[dir='rtl'] #panel { text-align: start; }

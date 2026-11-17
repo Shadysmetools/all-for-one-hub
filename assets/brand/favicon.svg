@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="All for One">
+<title>All for One</title>
+<defs>
+<path id="ha" fill-rule="evenodd" d="M-3.6 9V3.6A3.6 3.6 0 0 1 3.6 3.6V9Z M-2.4 4.3H2.4V5.6H-2.4Z"/>
+<path id="hb" fill-rule="evenodd" d="M-3.6 12V3.6A3.6 3.6 0 0 1 3.6 3.6V12Z M-2.4 4.3H2.4V5.6H-2.4Z"/>
+</defs>
+<path d="M8 5H56V30C56 45 46 55 32 61C18 55 8 45 8 30Z" fill="#0B1530" stroke="#4DA3FF" stroke-width="3" stroke-linejoin="round"/>
+<g fill="#4DA3FF">
+<use href="#ha" transform="translate(14.5 38)"/>
+<use href="#hb" transform="translate(25.5 35)"/>
+<use href="#hb" transform="translate(38.5 35)"/>
+<use href="#ha" transform="translate(49.5 38)"/>
+<path d="M18.1 47L19.6 30.5" fill="none" stroke="#4DA3FF" stroke-width="2.6" stroke-linecap="round"/>
+<g transform="translate(19.6 30.5) rotate(33.83)"><rect x="-3.4" y="-4.7" width="6.8" height="2" rx="1"/><path d="M-1.8-4.4L-1.1-18.27L0-22.27L1.1-18.27L1.8-4.4Z"/><rect x="-2.2" y="-2" width="4.4" height="4" rx="1.2"/></g>
+<path d="M29.1 44L27.2 28" fill="none" stroke="#4DA3FF" stroke-width="2.6" stroke-linecap="round"/>
+<g transform="translate(27.2 28) rotate(16.7)"><rect x="-3.4" y="-4.7" width="6.8" height="2" rx="1"/><path d="M-1.8-4.4L-1.1-12.7L0-16.7L1.1-12.7L1.8-4.4Z"/><rect x="-2.2" y="-2" width="4.4" height="4" rx="1.2"/></g>
+<path d="M34.9 44L36.8 28" fill="none" stroke="#4DA3FF" stroke-width="2.6" stroke-linecap="round"/>
+<g transform="translate(36.8 28) rotate(-16.7)"><rect x="-3.4" y="-4.7" width="6.8" height="2" rx="1"/><path d="M-1.8-4.4L-1.1-12.7L0-16.7L1.1-12.7L1.8-4.4Z"/><rect x="-2.2" y="-2" width="4.4" height="4" rx="1.2"/></g>
+<path d="M45.9 47L44.4 30.5" fill="none" stroke="#4DA3FF" stroke-width="2.6" stroke-linecap="round"/>
+<g transform="translate(44.4 30.5) rotate(-33.83)"><rect x="-3.4" y="-4.7" width="6.8" height="2" rx="1"/><path d="M-1.8-4.4L-1.1-18.27L0-22.27L1.1-18.27L1.8-4.4Z"/><rect x="-2.2" y="-2" width="4.4" height="4" rx="1.2"/></g>
+</g>
+<circle cx="32" cy="12" r="5.5" fill="#3FE0C5" fill-opacity=".28"/><circle cx="32" cy="12" r="2.8" fill="#3FE0C5"/>
+</svg>

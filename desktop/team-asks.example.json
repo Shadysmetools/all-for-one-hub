@@ -1,0 +1,207 @@
+{
+  "people": [
+    {
+      "name": "Alex",
+      "name_ar": "أليكس",
+      "kind": "person",
+      "role": "Owner",
+      "role_ar": "المالك",
+      "working_on": "Reviewing the Team board design",
+      "working_on_ar": "يراجع تصميم لوحة الفريق",
+      "status": "active",
+      "gender": "m"
+    },
+    {
+      "name": "Sam",
+      "name_ar": "سام",
+      "kind": "person",
+      "role": "Owner",
+      "role_ar": "المالك",
+      "working_on": "Setting up the WhatsApp Business number",
+      "working_on_ar": "يجهّز رقم واتساب للأعمال",
+      "status": "active",
+      "gender": "m"
+    },
+    {
+      "name": "Riley",
+      "name_ar": "رايلي",
+      "kind": "person",
+      "role": "QA and replies",
+      "role_ar": "الجودة والردود",
+      "working_on": "Labelling tickets for the judge test",
+      "working_on_ar": "تصنّف التذاكر لاختبار المُقيِّم",
+      "status": "active",
+      "gender": "f"
+    },
+    {
+      "name": "Maya",
+      "name_ar": "مايا",
+      "kind": "person",
+      "role": "Support lead",
+      "role_ar": "قائدة الدعم",
+      "working_on": "Setting up Odoo access",
+      "working_on_ar": "تجهّز الوصول إلى Odoo",
+      "status": "waiting",
+      "gender": "f"
+    },
+    {
+      "name": "Jordan",
+      "name_ar": "جوردن",
+      "kind": "person",
+      "role": "Support",
+      "role_ar": "الدعم",
+      "working_on": "Answering T-2044 and T-2046",
+      "working_on_ar": "يرد على T-2044 و T-2046",
+      "status": "active",
+      "gender": "m"
+    },
+    {
+      "name": "The hub",
+      "name_ar": "المركز",
+      "kind": "agent",
+      "role": "Agent: tickets and approvals",
+      "role_ar": "وكيل: التذاكر والموافقات",
+      "working_on": "Sorting 12 new tickets",
+      "working_on_ar": "يرتّب 12 تذكرة جديدة",
+      "status": "active",
+      "gender": "m"
+    },
+    {
+      "name": "Helpdesk Agent",
+      "name_ar": "وكيل الدعم الرقمي",
+      "kind": "agent",
+      "role": "Agent: the twin",
+      "role_ar": "وكيل: النسخة الرقمية",
+      "working_on": "Drafting replies for review",
+      "working_on_ar": "يكتب مسودات ردود للمراجعة",
+      "status": "active",
+      "gender": "m"
+    },
+    {
+      "name": "Builder session",
+      "name_ar": "جلسة البناء",
+      "kind": "agent",
+      "role": "Agent: builds the desktop app",
+      "role_ar": "وكيل: يبني تطبيق سطح المكتب",
+      "working_on": "Building the desktop app",
+      "working_on_ar": "تبني تطبيق سطح المكتب",
+      "status": "waiting",
+      "gender": "f"
+    },
+    {
+      "name": "Reports session",
+      "name_ar": "جلسة التقارير",
+      "kind": "agent",
+      "role": "Agent: report feeds",
+      "role_ar": "وكيل: خلاصات التقارير",
+      "working_on": "Checking the daily feeds",
+      "working_on_ar": "تفحص الخلاصات اليومية",
+      "status": "active",
+      "gender": "f"
+    }
+  ],
+  "asks": [
+    {
+      "id": "ask-1",
+      "who": "The hub",
+      "whom": "Riley",
+      "what": "the server API token (server setup)",
+      "what_ar": "رمز واجهة الخادم (إعداد الخادم)",
+      "kind": "access",
+      "created_at": "2026-11-10T12:00:00Z"
+    },
+    {
+      "id": "ask-2",
+      "who": "Alex",
+      "whom": "Sam",
+      "what": "the company documents (Meta business verification)",
+      "what_ar": "مستندات الشركة (توثيق حساب Meta للأعمال)",
+      "kind": "access",
+      "created_at": "2026-11-08T12:00:00Z"
+    },
+    {
+      "id": "ask-3",
+      "who": "The hub",
+      "whom": "Alex",
+      "what": "an OK to confirm T-2041 \"Invoice export fails\"",
+      "what_ar": "الموافقة على تأكيد T-2041 \"فشل تصدير الفاتورة\"",
+      "kind": "approval",
+      "created_at": "2026-11-13T08:00:00Z",
+      "ticket_id": "T-2041"
+    },
+    {
+      "id": "ask-4",
+      "who": "The hub",
+      "whom": "Alex",
+      "what": "an OK to resolve T-2038 \"Login link expired\"",
+      "what_ar": "الموافقة على إغلاق T-2038 \"انتهت صلاحية رابط الدخول\"",
+      "kind": "approval",
+      "created_at": "2026-11-12T10:00:00Z",
+      "ticket_id": "T-2038"
+    },
+    {
+      "id": "ask-5",
+      "who": "Maya",
+      "whom": "Alex",
+      "what": "the new Odoo API key (ticket sync)",
+      "what_ar": "مفتاح Odoo الجديد (مزامنة التذاكر)",
+      "kind": "access",
+      "created_at": "2026-11-11T12:00:00Z"
+    },
+    {
+      "id": "ask-6",
+      "who": "Builder session",
+      "whom": "Sam",
+      "what": "the go-ahead to move the support number to WhatsApp Business",
+      "what_ar": "الموافقة على نقل رقم الدعم إلى واتساب للأعمال",
+      "kind": "approval",
+      "created_at": "2026-11-09T12:00:00Z"
+    },
+    {
+      "id": "ask-7",
+      "who": "Jordan",
+      "whom": "Maya",
+      "what": "a review of the reply on T-2044 \"Report is empty\"",
+      "what_ar": "مراجعة الرد على T-2044 \"التقرير فارغ\"",
+      "kind": "ticket",
+      "created_at": "2026-11-13T07:00:00Z",
+      "ticket_id": "T-2044"
+    },
+    {
+      "id": "ask-8",
+      "who": "Helpdesk Agent",
+      "whom": "Riley",
+      "what": "60 labelled tickets (the judge test)",
+      "what_ar": "60 تذكرة مصنّفة (اختبار المُقيِّم)",
+      "kind": "ticket",
+      "created_at": "2026-11-12T00:00:00Z"
+    },
+    {
+      "id": "ask-9",
+      "who": "Riley",
+      "whom": "Jordan",
+      "what": "client voice notes (the speech-to-text test)",
+      "what_ar": "الرسائل الصوتية (اختبار تحويل الصوت إلى نص)",
+      "kind": "ticket",
+      "created_at": "2026-11-11T00:00:00Z"
+    },
+    {
+      "id": "ask-10",
+      "who": "Maya",
+      "whom": "Sam",
+      "what": "a decision on which email address clients see",
+      "what_ar": "قرار بشأن عنوان البريد الذي يراه العملاء",
+      "kind": "approval",
+      "created_at": "2026-11-12T06:00:00Z"
+    },
+    {
+      "id": "ask-11",
+      "who": "Sam",
+      "whom": "Alex",
+      "what": "a decision: which chat tool the team uses",
+      "what_ar": "قرار: أي أداة محادثة يستخدمها الفريق",
+      "kind": "approval",
+      "created_at": "2026-11-13T06:00:00Z"
+    }
+  ]
+}

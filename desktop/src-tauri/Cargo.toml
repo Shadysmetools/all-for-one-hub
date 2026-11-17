@@ -1,0 +1,39 @@
+[package]
+name = "one-desktop"
+version = "0.1.0"
+description = "One: the All for One desktop voice app"
+edition = "2021"
+publish = false
+
+[lib]
+name = "one_desktop_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-global-shortcut = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+regex = "1"
+url = "2"
+rpassword = "7"
+tokio = { version = "1", features = ["process", "io-util", "sync", "macros", "time", "rt", "net"] }
+# Real-time voice: ElevenLabs streaming TTS and live speech-to-text over WebSockets (wss only,
+# rustls with the ring provider, the same TLS stack reqwest already uses).
+tokio-tungstenite = { version = "0.28", default-features = false, features = ["connect", "rustls-tls-webpki-roots"] }
+rustls = { version = "0.23", default-features = false, features = ["ring", "std", "tls12"] }
+webpki-roots = "1"
+base64 = "0.22"
+tokio-util = "0.7"
+futures-util = "0.3"
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "json", "multipart", "stream"] }
+# Explicit platform features: without them keyring v3 silently falls back to a mock store.
+keyring = { version = "3", features = ["windows-native", "apple-native", "linux-native"] }
+
+# Keep platform-specific tables LAST: every line after a [target...] header belongs to it.
+[target.'cfg(windows)'.dependencies]
+# Job Object (kill-on-close) so the claude tree dies with the app; window list for call detection.
+windows-sys = { version = "0.59", features = ["Win32_Foundation", "Win32_Security", "Win32_System_JobObjects", "Win32_System_Threading", "Win32_UI_WindowsAndMessaging", "Win32_System_Registry"] }

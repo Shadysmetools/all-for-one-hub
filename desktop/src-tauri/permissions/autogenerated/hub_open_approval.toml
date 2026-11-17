@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-hub-open-approval"
+description = "Enables the hub_open_approval command without any pre-configured scope."
+commands.allow = ["hub_open_approval"]
+
+[[permission]]
+identifier = "deny-hub-open-approval"
+description = "Denies the hub_open_approval command without any pre-configured scope."
+commands.deny = ["hub_open_approval"]

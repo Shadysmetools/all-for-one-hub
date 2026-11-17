@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-team-remind"
+description = "Enables the team_remind command without any pre-configured scope."
+commands.allow = ["team_remind"]
+
+[[permission]]
+identifier = "deny-team-remind"
+description = "Denies the team_remind command without any pre-configured scope."
+commands.deny = ["team_remind"]

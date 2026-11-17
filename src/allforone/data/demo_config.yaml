@@ -1,0 +1,52 @@
+# Demo configuration for the fictional company "Northwind Supplies". Placeholders and synthetic ids only.
+company: Northwind Supplies
+run_mode: dry_run            # dry_run | test | live
+phone_number_id: DEMO_PHONE_NUMBER_ID
+window_hours: 24             # WhatsApp customer-service window
+reopen_days: 7               # a customer reply after resolve within N days asks the owner: reopen or new issue
+approval_ttl_hours: 24
+internal_approval_ttl_days: 14
+approver_tg_ids: [1001]      # Telegram ids allowed to approve any ticket (the ticket owner is always allowed)
+
+helpdesk:
+  write_enabled: false       # real writes also need run_mode: live
+  working_stage: 901         # stage a new ticket lands in (must be a silent stage)
+  safe_stage_ids: [901, 902, 903]          # stages that never email the client
+  client_emailing_stage_ids: [9]       # stages treated as emailing even without a template
+  closed_stage_ids: [3, 4]
+  teams: {default: 2, inquiry: 11}
+
+team:
+  - {uid: 777, name: Alex, tg_id: 1001, role: support, skills: [Helpdesk, Sales, POS], tracks: [inquiry, functional]}
+  - {uid: 778, name: Maya, tg_id: 1003, role: implementation-lead, skills: [Inventory, Manufacturing, Accounting], tracks: [development, functional]}
+  - {uid: 779, name: Sam, tg_id: 1005, role: support, skills: [HR, Website, CRM], tracks: [inquiry]}
+
+routing:
+  weights: {owns_client: 3.0, owns_module: 2.0, owns_type: 1.5, role_fit: 1.0, load: 0.5}
+
+modules:                     # keyword glossary, first hit wins (EN + AR keywords)
+  Inventory: [inventory, stock, warehouse, مخزون, مخازن]
+  Sales: [sales, sale order, quotation, مبيعات, عرض سعر]
+  Purchase: [purchase, vendor bill, rfq, مشتريات, مورد]
+  Accounting: [accounting, invoice, journal, payment, محاسبة, فاتورة]
+  POS: [pos, point of sale, نقطة بيع, كاشير]
+  Manufacturing: [manufacturing, mrp, bom, تصنيع]
+  HR: [hr, employee, payroll, attendance, موظف, مرتبات]
+  Helpdesk: [helpdesk, ticket, support, دعم, تذكرة]
+  Website: [website, web, ecommerce, متجر, موقع]
+  CRM: [crm, lead, pipeline]
+
+judge:
+  primary_model: PRIMARY_JUDGE_MODEL_ID
+  fallback_model: FALLBACK_JUDGE_MODEL_ID
+  threshold: 0.7
+
+kpi:
+  sink: jsonl                # jsonl | stdout
+  path: demo/out/kpis.jsonl
+
+# Any template below can be overridden per language; unset keys use the built-in defaults.
+templates:
+  sign:
+    en: "— Northwind Supplies Support"
+    ar: "— دعم Northwind"

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-mic-frames"
+description = "Enables the mic_frames command without any pre-configured scope."
+commands.allow = ["mic_frames"]
+
+[[permission]]
+identifier = "deny-mic-frames"
+description = "Denies the mic_frames command without any pre-configured scope."
+commands.deny = ["mic_frames"]

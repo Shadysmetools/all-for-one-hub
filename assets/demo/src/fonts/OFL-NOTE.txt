@@ -1,0 +1,2 @@
+Playfair Display (c) The Playfair Display Project Authors. SIL Open Font License 1.1: https://openfontlicense.org
+Bundled so the demo player renders the brand wordmark offline (latin subset, woff2).

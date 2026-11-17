@@ -1,0 +1,61 @@
+/* Tickets screen. Theme variables come from style.css; layout uses logical properties so RTL needs no overrides. */
+#tickets { flex: 1; min-height: 0; overflow-y: auto; user-select: text; color: var(--ink); line-height: 1.45; font-size: 1rem; font-family: 'Segoe UI', 'Noto Sans Arabic', Tahoma, system-ui, sans-serif; }
+[dir='rtl'] #tickets { line-height: 1.6; }
+#tickets main { padding: 20px 20px 80px; max-width: 1100px; }
+#tickets .thead { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; padding: 16px 20px; border-block-end: 1px solid var(--line); background: var(--surface); }
+#tickets .thead h1 { margin: 0; font-size: 1.5rem; margin-inline-end: auto; }
+#tickets .note { color: var(--muted); font-size: 0.85rem; }
+#tickets .sect { margin: 26px 0 10px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px; }
+#tickets .count { background: var(--accent-soft); color: var(--link); border-radius: 999px; padding: 1px 12px; font-size: 0.9rem; }
+#tickets .empty { color: var(--muted); margin: 6px 0; }
+#tickets .err { color: var(--warn); font-weight: 600; overflow-wrap: anywhere; }
+#tickets ul, #tickets ol { list-style: none; margin: 0; padding: 0; }
+#tickets .cards { display: grid; gap: 14px; }
+
+#tickets .card { background: var(--surface); border: 1px solid var(--line); border-inline-start: 6px solid var(--warn); border-radius: 16px; padding: 18px; box-shadow: var(--shadow); }
+#tickets .card.detail { border-inline-start-color: var(--accent); margin-block-end: 14px; }
+#tickets .head { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin-block-end: 12px; font-size: 1.15rem; }
+#tickets .facts, #tickets .r2 { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-block-end: 12px; }
+#tickets .f { min-width: 0; }
+#tickets .f small, #tickets .lbl { display: block; color: var(--muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; }
+[dir='rtl'] #tickets .f small, [dir='rtl'] #tickets .lbl { letter-spacing: 0; text-transform: none; font-size: 0.85rem; }
+#tickets .f .v { display: block; font-weight: 600; overflow-wrap: anywhere; }
+#tickets .fp { font-family: Consolas, monospace; font-size: 0.9rem; overflow-wrap: anywhere; user-select: all; }
+#tickets .draft { margin-block: 4px 14px; padding: 12px 14px; border-radius: 12px; background: var(--soft); white-space: pre-wrap; overflow-wrap: anywhere; max-height: 14rem; overflow-y: auto; }
+#tickets .acts { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+#tickets .confirm { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 8px 12px; border: 2px solid var(--accent); border-radius: 12px; background: var(--accent-soft); }
+
+#tickets .tag { padding: 2px 10px; border-radius: 999px; border: 1px solid var(--line); font-weight: 600; font-size: 0.8rem; white-space: nowrap; }
+#tickets .tag.warn { color: var(--warn); border-color: var(--warn); background: var(--warn-soft); }
+
+#tickets .rows { display: grid; gap: 10px; }
+#tickets .row { display: block; width: 100%; text-align: start; padding: 14px 16px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); color: var(--ink); font: inherit; }
+#tickets .row:hover { border-color: var(--accent); background: var(--surface); }
+#tickets .r1 { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin-block-end: 8px; font-size: 1.05rem; }
+#tickets .r2 { margin: 0; }
+
+#tickets .hub-banner { padding: 12px 16px; border-radius: 12px; border: 1px solid var(--line); background: var(--soft); }
+#tickets .hub-banner.bad { border-color: var(--warn); background: var(--warn-soft); color: var(--warn); }
+
+#tickets .timeline { display: grid; gap: 8px; border-inline-start: 3px solid var(--line); padding-inline-start: 16px; }
+#tickets .timeline small { color: var(--muted); }
+
+/* the nav badge on the Tickets tab */
+.nav-badge { display: inline-block; min-width: 20px; margin-inline-start: 8px; padding: 0 6px; border-radius: 999px; background: var(--warn); color: var(--bg); font-size: 12px; font-weight: 700; line-height: 20px; text-align: center; }
+.nav-badge.off { background: #c0392b; color: #fff; }
+
+/* the live step strip */
+#tickets .strip { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; }
+#tickets .step { padding: 3px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); font-size: 0.78rem; white-space: nowrap; }
+#tickets .step.past { color: var(--ink); background: var(--soft); }
+#tickets .step.cur { color: var(--bg); background: var(--accent); border-color: var(--accent); font-weight: 700; }
+#tickets .step.cur.warn, #tickets .step.cur.held { background: var(--warn); border-color: var(--warn); }
+#tickets .life { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; margin-block-end: 10px; }
+#tickets .life .since { color: var(--muted); }
+#tickets .tag.ok { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+#tickets .conn { display: inline-flex; gap: 8px; align-items: center; }
+#tickets .pill { padding: 2px 10px; border-radius: 999px; border: 1px solid var(--line); font-size: 0.8rem; font-weight: 700; }
+#tickets .pill.live { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+#tickets .pill.bad { color: var(--warn); border-color: var(--warn); background: var(--warn-soft); }
+#tickets .stamp { color: var(--muted); font-size: 0.85rem; }
+#tickets .stamp.stale { color: var(--warn); }

@@ -1,0 +1,32 @@
+/* patches + the One voice panel (loaded after player.css) */
+.gwrap{position:relative;width:560px;height:340px}
+.gwrap .g-val{position:absolute;left:0;right:0;top:170px;margin:0;text-align:center}
+.b.clamp{-webkit-line-clamp:6}
+.dwin{height:740px}
+.main{padding:22px 28px;gap:12px}
+.qrow{font-size:21px;padding:14px 18px;grid-template-columns:88px 1fr 70px}
+.main .foot{margin-top:auto;font-size:16px;color:var(--dim);border-top:1px solid var(--rule);padding-top:10px}
+.actcard{opacity:0;font-size:20px}.actcard.in{opacity:1}
+.voice{width:660px;padding:18px 24px;gap:10px}
+.voice .vh{gap:16px;justify-content:flex-start;font-size:23px}
+.vh .ctl{margin-left:auto;display:flex;gap:10px;align-items:center}
+.ctl .cam{display:flex;align-items:center;gap:6px;color:var(--pulse);font-size:13px;padding:6px 10px;border:1px solid rgba(63,224,197,.4);border-radius:10px}
+.ctl .cam em{font-style:normal;font-family:var(--mono)}
+.ctl .mute,.ctl .kill{width:42px;height:42px;border-radius:12px;background:#1C2F63;display:grid;place-items:center;color:var(--ink)}
+.ctl .mute svg{width:20px;fill:currentColor}.ctl .kill{background:rgba(255,92,122,.16);color:var(--alarm)}
+.orb{width:64px;height:64px;border-radius:50%;flex:none;background:radial-gradient(circle at 35% 30%,#bfe0ff,var(--sig) 45%,#1b4a9a);box-shadow:0 0 30px rgba(77,163,255,.7);transition:background .4s,box-shadow .4s}
+.orb.listen{animation:orbl 2.2s ease-in-out infinite}
+.orb.think{animation:orbl .8s ease-in-out infinite}
+.orb.speak{background:radial-gradient(circle at 35% 30%,#d4fff6,var(--pulse) 45%,#0b7d6c);box-shadow:0 0 44px rgba(63,224,197,.85);animation:orbs .55s ease-in-out infinite}
+@keyframes orbl{50%{transform:scale(1.1);box-shadow:0 0 50px rgba(77,163,255,.9)}}
+@keyframes orbs{50%{transform:scale(1.16)}}
+.ldot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--pulse);margin-right:8px;animation:blink 1.2s steps(1) infinite}
+.lvl{height:40px;flex:none}.voice .lvl s{height:5px}
+.tags{display:flex;gap:8px;flex-wrap:wrap}.tags .chip{font-size:15px;padding:5px 12px}
+.tbox{overflow:hidden;gap:9px}
+.tb{font-size:20px;padding:11px 15px;max-width:560px}
+.tb .spk{display:block;font:600 12px var(--mono);color:#BFD6FF;margin-bottom:3px}
+.tb.a{align-self:flex-start}
+.tb.a .tt{min-height:1em}
+.b{flex:none}
+.voice .vh{margin-bottom:8px}

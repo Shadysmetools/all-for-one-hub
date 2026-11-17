@@ -1,0 +1,67 @@
+1
+00:00:00,100 --> 00:00:05,373
+WhatsApp → helpdesk, with AI that drafts and humans who approve
+
+2
+00:00:05,573 --> 00:00:08,373
+Step 1 · A client sends a voice note
+
+3
+00:00:08,573 --> 00:00:11,973
+Step 2 · Live transcription
+
+4
+00:00:12,173 --> 00:00:15,973
+Step 3 · Analysis: type, module, track
+
+5
+00:00:16,173 --> 00:00:20,006
+Step 4 · Ticket #20001 created
+
+6
+00:00:20,206 --> 00:00:23,296
+Step 5 · Assigned, with the reason
+
+7
+00:00:23,496 --> 00:00:28,304
+Step 6 · The only automatic message
+
+8
+00:00:28,504 --> 00:00:34,334
+Steps 7-8 · CONFIRM draft, judged 0.90 vs 0.70
+
+9
+00:00:34,534 --> 00:00:38,738
+Step 9 · A human approves in the chat app
+
+10
+00:00:38,938 --> 00:00:41,738
+Step 10 · The client confirms
+
+11
+00:00:41,938 --> 00:00:46,738
+Step 11 · Proof run: reproduced
+
+12
+00:00:46,938 --> 00:00:51,238
+Step 12 · RESOLVE approved and sent
+
+13
+00:00:51,438 --> 00:00:56,238
+Step 13 · KPIs, per person
+
+14
+00:00:56,438 --> 00:01:01,125
+Replies in the client's language, right to left
+
+15
+00:01:01,325 --> 00:01:05,622
+Coming next · All for One Desktop and Team Voice AI
+
+16
+00:01:05,822 --> 00:01:20,275
+One · AI teammate in All for One Desktop · powered by Claude · hands-free, interruptible, confirms before acting
+
+17
+00:01:20,475 --> 00:01:24,494
+Open source · Apache-2.0

@@ -1,0 +1,195 @@
+{
+  "demo": "allforone",
+  "lang": "ar",
+  "start": "2026-01-12T09:00:00+00:00",
+  "steps": 13,
+  "events": [
+    {
+      "t": "2026-01-12T09:00:00+00:00",
+      "offset_s": 0.0,
+      "step": 1,
+      "name": "Voice note arrives",
+      "actor": "client",
+      "summary": "voice note from +1-555-0100 (4844 byte synthetic clip)",
+      "payload": {
+        "from": "+1-555-0100",
+        "kind": "voice",
+        "audio": {
+          "bytes": 4844,
+          "sha256": "b8dcc50217c7",
+          "synthetic": true
+        }
+      }
+    },
+    {
+      "t": "2026-01-12T09:00:01+00:00",
+      "offset_s": 1.0,
+      "step": 2,
+      "name": "Transcription",
+      "actor": "hub",
+      "summary": "speech-to-text (fake-stt (fixture))",
+      "payload": {
+        "transcript": "عندي مشكلة في المخزون، الكمية ظاهرة غلط بعد ما عملت تسليم",
+        "provider": "fake-stt (fixture)"
+      }
+    },
+    {
+      "t": "2026-01-12T09:00:02+00:00",
+      "offset_s": 2.0,
+      "step": 3,
+      "name": "Analysis",
+      "actor": "hub",
+      "summary": "issue | type Bug | module Inventory | track functional",
+      "payload": {
+        "nature": "issue",
+        "ticket_type": "Bug",
+        "module": "Inventory",
+        "track": "functional"
+      }
+    },
+    {
+      "t": "2026-01-12T09:00:02+00:00",
+      "offset_s": 2.0,
+      "step": 4,
+      "name": "Ticket created",
+      "actor": "hub",
+      "summary": "helpdesk ticket #20001 created (mail suppressed, silent stage 901)",
+      "payload": {
+        "ticket_id": 20001,
+        "team_id": 2,
+        "stage_id": 901
+      }
+    },
+    {
+      "t": "2026-01-12T09:00:02+00:00",
+      "offset_s": 2.0,
+      "step": 5,
+      "name": "Assignment",
+      "actor": "hub",
+      "summary": "assigned to Maya",
+      "payload": {
+        "owner": "Maya",
+        "uid": 778,
+        "rationale": "assigned to Maya because: owns this client (history); handles the Inventory module; role covers the functional track"
+      }
+    },
+    {
+      "t": "2026-01-12T09:00:03+00:00",
+      "offset_s": 3.0,
+      "step": 6,
+      "name": "Instant ack",
+      "actor": "hub",
+      "summary": "automatic acknowledgement sent (the only automatic message)",
+      "payload": {
+        "text": "مرحباً Jordan، شكراً لتواصلك معنا. سجّلنا طلبك كتذكرة رقم #20001، وMaya يتابعه الآن. الخطوة التالية: نؤكد معك بعض التفاصيل، وسنوافيك بالتحديثات هنا. — دعم Northwind",
+        "automatic": true
+      }
+    },
+    {
+      "t": "2026-01-12T09:00:05+00:00",
+      "offset_s": 5.0,
+      "step": 7,
+      "name": "CONFIRM draft",
+      "actor": "hub",
+      "summary": "draft held for owner approval in Telegram (ticket #20001)",
+      "payload": {
+        "kind": "confirm",
+        "draft": "مرحباً Jordan، للتأكد من أننا نعالج النقطة الصحيحة: تواجه عندي مشكلة في المخزون، الكمية ظاهرة غلط بعد ما عملت تسليم في المخزون، وتريد الموضوع يشتغل زي ما هو متوقع. هل هذا صحيح؟ بمجرد التأكيد سنتابع. قبل أن نبدأ، نحتاج منك بعض المعلومات: ١) لقطة شاشة مع رابط الصفحة، أو تسجيل شاشة قصير، عشان نقدر نعيد المشكلة. بعد التأكيد والإجابة سنبدأ. — دعم Northwind",
+        "sent_to_client": false
+      }
+    },
+    {
+      "t": "2026-01-12T09:00:05+00:00",
+      "offset_s": 5.0,
+      "step": 8,
+      "name": "Judge score",
+      "actor": "judge",
+      "summary": "aggregate 0.9 (threshold 0.7), flag=False",
+      "payload": {
+        "scores": {
+          "correctness": 0.9,
+          "tone": 0.9,
+          "language": 0.9,
+          "policy": 0.9,
+          "completeness": 0.9
+        },
+        "aggregate": 0.9,
+        "flag": false
+      }
+    },
+    {
+      "t": "2026-01-12T09:00:50+00:00",
+      "offset_s": 50.0,
+      "step": 9,
+      "name": "Owner approves",
+      "actor": "owner",
+      "summary": "Maya taps Approve; CONFIRM sent to the client",
+      "payload": {
+        "approver_tg_id": 1003,
+        "sent": "مرحباً Jordan، للتأكد من أننا نعالج النقطة الصحيحة: تواجه عندي مشكلة في المخزون، الكمية ظاهرة غلط بعد ما عملت تسليم في المخزون، وتريد الموضوع يشتغل زي ما هو متوقع. هل هذا صحيح؟ بمجرد التأكيد سنتابع. قبل أن نبدأ، نحتاج منك بعض المعلومات: ١) لقطة شاشة مع رابط الصفحة، أو تسجيل شاشة قصير، عشان نقدر نعيد المشكلة. بعد التأكيد والإجابة سنبدأ. — دعم Northwind",
+        "automatic": false
+      }
+    },
+    {
+      "t": "2026-01-12T09:04:10+00:00",
+      "offset_s": 250.0,
+      "step": 10,
+      "name": "Client confirms",
+      "actor": "client",
+      "summary": "client confirms; the owner marks it confirmed and work starts",
+      "payload": {
+        "reply": "أيوه، كده صح. من فضلكم كملوا.",
+        "stage": "in_progress"
+      }
+    },
+    {
+      "t": "2026-01-12T11:04:10+00:00",
+      "offset_s": 7450.0,
+      "step": 11,
+      "name": "Proof run",
+      "actor": "proof",
+      "summary": "reproduced: share link https://proof.example.com/s/Contoso/20001",
+      "payload": {
+        "verdict": "reproduced",
+        "share_link": "https://proof.example.com/s/Contoso/20001",
+        "simulated": true
+      }
+    },
+    {
+      "t": "2026-01-12T11:04:40+00:00",
+      "offset_s": 7480.0,
+      "step": 12,
+      "name": "RESOLVE approved and sent",
+      "actor": "owner",
+      "summary": "RESOLVE draft approved and sent; ticket resolved",
+      "payload": {
+        "sent": "مرحباً Jordan، تم حل طلبك (تذكرة #20001): المخزون: عندي مشكلة في المخزون، الكمية ظاهرة غلط بعد ما عملت تسليم. يمكنك التحقق من هنا: https://proof.example.com/s/Contoso/20001. إن كان هناك ما لا يزال غير صحيح فرد علينا وسنعيد فتحها، وإلا سنغلقها. شكراً لصبرك. هذا فيديو قصير يوضح أنها تعمل: https://proof.example.com/s/Contoso/20001. افتح الفيديو وتحقق من الخطوة. — دعم Northwind",
+        "stage": "resolved"
+      }
+    },
+    {
+      "t": "2026-01-12T11:04:41+00:00",
+      "offset_s": 7481.0,
+      "step": 13,
+      "name": "KPIs",
+      "actor": "hub",
+      "summary": "resolved, 1 automatic message, 3 client messages in total",
+      "payload": {
+        "outcome": {
+          "ticket_id": 20001,
+          "client": "Contoso",
+          "type": "Bug",
+          "module": "Inventory",
+          "owner_uid": 778,
+          "resolved": true,
+          "proof_outcome": "reproduced",
+          "judge_video_score": 0.88,
+          "judge_flag": false,
+          "reopen_count": 0
+        },
+        "automatic_messages": 1,
+        "client_messages": 3
+      }
+    }
+  ]
+}

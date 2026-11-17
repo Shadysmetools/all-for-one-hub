@@ -1,0 +1,49 @@
+name: Feature request
+description: Suggest an improvement or a new connector.
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea. Please describe the problem before the solution. **Do not include real client data.**
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Who hits this, and what does it cost them today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: What should happen? If it adds a connector, name the interface it implements.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: dropdown
+    id: safety
+    attributes:
+      label: Does this touch a safety rule?
+      description: These are the one-ack rule, bound human approvals, the no-delete helpdesk guard, and redaction before judging.
+      options:
+        - "No"
+        - "Yes (explain below)"
+        - "Not sure"
+    validations:
+      required: true
+  - type: textarea
+    id: safety-notes
+    attributes:
+      label: Safety notes
+      description: If yes, explain how the rule stays intact.
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Contribution
+      options:
+        - label: I'm willing to open a PR for this.

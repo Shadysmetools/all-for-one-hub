@@ -1,0 +1,344 @@
+{
+ "total": 84.594,
+ "scenes": [
+  {
+   "id": "title",
+   "scene": "title",
+   "start": 0.0,
+   "dur": 5.473,
+   "audio_start": 0.25,
+   "audio_dur": 4.923,
+   "caption": "WhatsApp \u2192 helpdesk, with AI that drafts and humans who approve",
+   "clips": [
+    {
+     "id": "title",
+     "file": "title-e44f9ddb8283.mp3",
+     "at": 0.25,
+     "dur": 4.923,
+     "start": 0.25,
+     "cut": 0.0
+    }
+   ]
+  },
+  {
+   "id": "voice",
+   "scene": "voice",
+   "start": 5.473,
+   "dur": 3.0,
+   "audio_start": 5.723,
+   "audio_dur": 1.486,
+   "caption": "Step 1 \u00b7 A client sends a voice note",
+   "clips": [
+    {
+     "id": "voice",
+     "file": "voice-0fc07a01eabe.mp3",
+     "at": 0.25,
+     "dur": 1.486,
+     "start": 5.723,
+     "cut": 0.0
+    }
+   ]
+  },
+  {
+   "id": "transcribe",
+   "scene": "transcribe",
+   "start": 8.473,
+   "dur": 3.6,
+   "audio_start": 8.723,
+   "audio_dur": 1.904,
+   "caption": "Step 2 \u00b7 Live transcription",
+   "clips": [
+    {
+     "id": "transcribe",
+     "file": "transcribe-7a4c060ce511.mp3",
+     "at": 0.25,
+     "dur": 1.904,
+     "start": 8.723,
+     "cut": 0.0
+    }
+   ]
+  },
+  {
+   "id": "analysis",
+   "scene": "analysis",
+   "start": 12.073,
+   "dur": 4.0,
+   "audio_start": 12.323,
+   "audio_dur": 2.694,
+   "caption": "Step 3 \u00b7 Analysis: type, module, track",
+   "clips": [
+    {
+     "id": "analysis",
+     "file": "analysis-619b7ad3a61c.mp3",
+     "at": 0.25,
+     "dur": 2.694,
+     "start": 12.323,
+     "cut": 0.0
+    }
+   ]
+  },
+  {
+   "id": "ticket",
+   "scene": "ticket",
+   "start": 16.073,
+   "dur": 4.033,
+   "audio_start": 16.323,
+   "audio_dur": 3.483,
+   "caption": "Step 4 \u00b7 Ticket #20001 created",
+   "clips": [
+    {
+     "id": "ticket",
+     "file": "ticket-324e9940b2cc.mp3",
+     "at": 0.25,
+     "dur": 3.483,
+     "start": 16.323,
+     "cut": 0.0
+    }
+   ]
+  },
+  {
+   "id": "assign",
+   "scene": "assign",
+   "start": 20.106,
+   "dur": 3.29,
+   "audio_start": 20.356,
+   "audio_dur": 2.74,
+   "caption": "Step 5 \u00b7 Assigned, with the reason",
+   "clips": [
+    {
+     "id": "assign",
+     "file": "assign-1a2bb8649746.mp3",
+     "at": 0.25,
+     "dur": 2.74,
+     "start": 20.356,
+     "cut": 0.0
+    }
+   ]
+  },
+  {
+   "id": "ack",
+   "scene": "ack",
+   "start": 23.396,
+   "dur": 5.008,
+   "audio_start": 23.646,
+   "audio_dur": 4.458,
+   "caption": "Step 6 \u00b7 The only automatic message",
+   "clips": [
+    {
+     "id": "ack",
+     "file": "ack-065cf9561769.mp3",
+     "at": 0.25,
+     "dur": 4.458,
+     "start": 23.646,
+     "cut": 0.0
+    }
+   ]
+  },
+  {
+   "id": "confirm",
+   "scene": "confirm",
+   "start": 28.404,
+   "dur": 6.03,
+   "audio_start": 28.654,
+   "audio_dur": 5.48,
+   "caption": "Steps 7-8 \u00b7 CONFIRM draft, judged 0.90 vs 0.70",
+   "clips": [
+    {
+     "id": "confirm",
+     "file": "confirm-8f43175fbf91.mp3",
+     "at": 0.25,
+     "dur": 5.48,
+     "start": 28.654,
+     "cut": 0.0
+    }
+   ]
+  },
+  {
+   "id": "approve",
+   "scene": "approve",
+   "start": 34.434,
+   "dur": 4.405,
+   "audio_start": 34.684,
+   "audio_dur": 3.855,
+   "caption": "Step 9 \u00b7 A human approves in the chat app",
+   "clips": [
+    {
+     "id": "approve",
+     "file": "approve-61b41b8e1559.mp3",
+     "at": 0.25,
+     "dur": 3.855,
+     "start": 34.684,
+     "cut": 0.0
+    }
+   ]
+  },
+  {
+   "id": "reply",
+   "scene": "reply",
+   "start": 38.838,
+   "dur": 3.0,
+   "audio_start": 39.088,
+   "audio_dur": 1.44,
+   "caption": "Step 10 \u00b7 The client confirms",
+   "clips": [
+    {
+     "id": "reply",
+     "file": "reply-b862ce9bfbcb.mp3",
+     "at": 0.25,
+     "dur": 1.44,
+     "start": 39.088,
+     "cut": 0.0
+    }
+   ]
+  },
+  {
+   "id": "proof",
+   "scene": "proof",
+   "start": 41.838,
+   "dur": 5.0,
+   "audio_start": 42.088,
+   "audio_dur": 2.415,
+   "caption": "Step 11 \u00b7 Proof run: reproduced",
+   "clips": [
+    {
+     "id": "proof",
+     "file": "proof-d6360d0a6af6.mp3",
+     "at": 0.25,
+     "dur": 2.415,
+     "start": 42.088,
+     "cut": 0.0
+    }
+   ]
+  },
+  {
+   "id": "resolve",
+   "scene": "resolve",
+   "start": 46.838,
+   "dur": 4.5,
+   "audio_start": 47.088,
+   "audio_dur": 3.344,
+   "caption": "Step 12 \u00b7 RESOLVE approved and sent",
+   "clips": [
+    {
+     "id": "resolve",
+     "file": "resolve-9173b0b0e64e.mp3",
+     "at": 0.25,
+     "dur": 3.344,
+     "start": 47.088,
+     "cut": 0.0
+    }
+   ]
+  },
+  {
+   "id": "kpi",
+   "scene": "kpi",
+   "start": 51.338,
+   "dur": 5.0,
+   "audio_start": 51.588,
+   "audio_dur": 2.322,
+   "caption": "Step 13 \u00b7 KPIs, per person",
+   "clips": [
+    {
+     "id": "kpi",
+     "file": "kpi-cd0843e0ccf1.mp3",
+     "at": 0.25,
+     "dur": 2.322,
+     "start": 51.588,
+     "cut": 0.0
+    }
+   ]
+  },
+  {
+   "id": "arabic",
+   "scene": "arabic",
+   "start": 56.338,
+   "dur": 4.887,
+   "audio_start": 56.838,
+   "audio_dur": 4.087,
+   "caption": "Replies in the client's language, right to left",
+   "clips": [
+    {
+     "id": "arabic",
+     "file": "arabic-880fc2f14cbe.mp3",
+     "at": 0.5,
+     "dur": 4.087,
+     "start": 56.838,
+     "cut": 0.0
+    }
+   ]
+  },
+  {
+   "id": "next",
+   "scene": "next",
+   "start": 61.225,
+   "dur": 4.497,
+   "audio_start": 61.475,
+   "audio_dur": 3.947,
+   "caption": "Coming next \u00b7 All for One Desktop and Team Voice AI",
+   "clips": [
+    {
+     "id": "next",
+     "file": "next-819d406fa286.mp3",
+     "at": 0.25,
+     "dur": 3.947,
+     "start": 61.475,
+     "cut": 0.0
+    }
+   ]
+  },
+  {
+   "id": "voiceai",
+   "scene": "voiceai",
+   "start": 65.722,
+   "dur": 14.653,
+   "audio_start": 66.022,
+   "audio_dur": 3.297,
+   "caption": "One \u00b7 AI teammate in All for One Desktop \u00b7 powered by Claude \u00b7 hands-free, interruptible, confirms before acting",
+   "clips": [
+    {
+     "id": "one1",
+     "file": "one1-1a23dd856f82.mp3",
+     "at": 0.3,
+     "dur": 3.297,
+     "start": 66.022,
+     "cut": 0.0
+    },
+    {
+     "id": "one2",
+     "file": "one2-ed25d69f3a0c.mp3",
+     "at": 5.797,
+     "dur": 3.783,
+     "start": 71.52,
+     "cut": 1.0
+    },
+    {
+     "id": "one3",
+     "file": "one3-a00fd678b86a.mp3",
+     "at": 10.981,
+     "dur": 2.972,
+     "start": 76.703,
+     "cut": 0.0
+    }
+   ]
+  },
+  {
+   "id": "end",
+   "scene": "end",
+   "start": 80.375,
+   "dur": 4.219,
+   "audio_start": 80.625,
+   "audio_dur": 3.669,
+   "caption": "Open source \u00b7 Apache-2.0",
+   "clips": [
+    {
+     "id": "end",
+     "file": "end-40fe73fa164e.mp3",
+     "at": 0.25,
+     "dur": 3.669,
+     "start": 80.625,
+     "cut": 0.0
+    }
+   ]
+  }
+ ]
+}

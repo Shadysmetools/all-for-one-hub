@@ -1,0 +1,17 @@
+[title] All for One: an open-source support hub. AI drafts, humans approve.
+[voice] A client sends a voice note.
+[transcribe] It's transcribed instantly.
+[analysis] The hub reads it: a bug, in Inventory.
+[ticket] A ticket is created. Mail suppressed, writes guarded.
+[assign] It's assigned to Maya, with the reason shown.
+[ack] One instant acknowledgement, the only automatic message the hub sends.
+[confirm] The AI drafts a confirmation. A judge scores it: point nine, against point seven.
+[approve] Nothing is sent until a human approves. Maya taps Approve.
+[reply] The client says yes.
+[proof] A proof run reproduces the bug on video.
+[resolve] Maya approves the resolution, proof attached.
+[kpi] Every step is measured, per person.
+[arabic] مرحباً Jordan، سجّلنا طلبك، وMaya يتابعه الآن.
+[next] Coming next: a desktop console, and One, a voice teammate.
+[voiceai] Morning, Maya — three approvals are waiting, one is urgent. / It's Northwind's stock fix. The draft scored 0.9 — want me to read it? / Approving needs your tap — I've opened it for you.
+[end] Open source, Apache two point zero. Star us on GitHub.

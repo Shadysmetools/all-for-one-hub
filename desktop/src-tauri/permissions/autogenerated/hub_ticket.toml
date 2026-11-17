@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-hub-ticket"
+description = "Enables the hub_ticket command without any pre-configured scope."
+commands.allow = ["hub_ticket"]
+
+[[permission]]
+identifier = "deny-hub-ticket"
+description = "Denies the hub_ticket command without any pre-configured scope."
+commands.deny = ["hub_ticket"]

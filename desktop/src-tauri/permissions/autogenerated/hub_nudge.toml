@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-hub-nudge"
+description = "Enables the hub_nudge command without any pre-configured scope."
+commands.allow = ["hub_nudge"]
+
+[[permission]]
+identifier = "deny-hub-nudge"
+description = "Denies the hub_nudge command without any pre-configured scope."
+commands.deny = ["hub_nudge"]

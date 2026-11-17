@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-hub-snapshot"
+description = "Enables the hub_snapshot command without any pre-configured scope."
+commands.allow = ["hub_snapshot"]
+
+[[permission]]
+identifier = "deny-hub-snapshot"
+description = "Denies the hub_snapshot command without any pre-configured scope."
+commands.deny = ["hub_snapshot"]

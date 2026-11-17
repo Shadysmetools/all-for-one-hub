@@ -1,0 +1,83 @@
+name: Bug report
+description: Something in All for One doesn't work as documented.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. **Do not paste real client data**: no real messages, voice notes, phone numbers, names, emails or credentials. Use the demo company "Northwind Supplies" and `example.com` addresses.
+        **Security problem?** Don't file it here. Use a private report instead (see SECURITY.md).
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you saw, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: The smallest steps that reproduce it, ideally with `python -m allforone.demo` or a failing test.
+      placeholder: |
+        1. Set `adapters.judge: fake` in config.yaml
+        2. Run `python -m allforone.demo`
+        3. ...
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Webhook / intake
+        - STT
+        - Analysis / classification
+        - Tickets / helpdesk guard
+        - Assignment / routing
+        - Templates / drafts
+        - Judge / eval harness
+        - Approvals / Telegram
+        - Proof-video runner
+        - KPIs / learning
+        - Docs
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: adapters
+    attributes:
+      label: Adapters in use
+      options:
+        - All fakes (demo / tests)
+        - Some real adapters
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: "0.1.0 or a commit SHA"
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: "Ubuntu 24.04, Python 3.12.7"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Relevant log lines. Redact anything that isn't synthetic.
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: This report contains no real client data or secrets.
+          required: true
+        - label: I searched the existing issues first.
+          required: true

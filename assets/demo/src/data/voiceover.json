@@ -1,0 +1,138 @@
+{
+ "voice_id": "hpp4J3VqNfWAUOO0d1Us",
+ "voice_name": "Bella (ElevenLabs premade)",
+ "model_id": "eleven_multilingual_v2",
+ "lead_ms": 250,
+ "tail_ms": 300,
+ "segments": [
+  {
+   "id": "title",
+   "scene": "title",
+   "text": "All for One: an open-source support hub. AI drafts, humans approve.",
+   "caption": "WhatsApp → helpdesk, with AI that drafts and humans who approve"
+  },
+  {
+   "id": "voice",
+   "scene": "voice",
+   "text": "A client sends a voice note.",
+   "caption": "Step 1 · A client sends a voice note",
+   "min_ms": 3000
+  },
+  {
+   "id": "transcribe",
+   "scene": "transcribe",
+   "text": "It's transcribed instantly.",
+   "caption": "Step 2 · Live transcription",
+   "min_ms": 3600
+  },
+  {
+   "id": "analysis",
+   "scene": "analysis",
+   "text": "The hub reads it: a bug, in Inventory.",
+   "caption": "Step 3 · Analysis: type, module, track",
+   "min_ms": 4000
+  },
+  {
+   "id": "ticket",
+   "scene": "ticket",
+   "text": "A ticket is created. Mail suppressed, writes guarded.",
+   "caption": "Step 4 · Ticket #20001 created"
+  },
+  {
+   "id": "assign",
+   "scene": "assign",
+   "text": "It's assigned to Maya, with the reason shown.",
+   "caption": "Step 5 · Assigned, with the reason"
+  },
+  {
+   "id": "ack",
+   "scene": "ack",
+   "text": "One instant acknowledgement, the only automatic message the hub sends.",
+   "caption": "Step 6 · The only automatic message"
+  },
+  {
+   "id": "confirm",
+   "scene": "confirm",
+   "text": "The AI drafts a confirmation. A judge scores it: point nine, against point seven.",
+   "caption": "Steps 7-8 · CONFIRM draft, judged 0.90 vs 0.70"
+  },
+  {
+   "id": "approve",
+   "scene": "approve",
+   "text": "Nothing is sent until a human approves. Maya taps Approve.",
+   "caption": "Step 9 · A human approves in the chat app"
+  },
+  {
+   "id": "reply",
+   "scene": "reply",
+   "text": "The client says yes.",
+   "caption": "Step 10 · The client confirms",
+   "min_ms": 3000
+  },
+  {
+   "id": "proof",
+   "scene": "proof",
+   "text": "A proof run reproduces the bug on video.",
+   "caption": "Step 11 · Proof run: reproduced",
+   "min_ms": 5000
+  },
+  {
+   "id": "resolve",
+   "scene": "resolve",
+   "text": "Maya approves the resolution, proof attached.",
+   "caption": "Step 12 · RESOLVE approved and sent",
+   "min_ms": 4500
+  },
+  {
+   "id": "kpi",
+   "scene": "kpi",
+   "text": "Every step is measured, per person.",
+   "caption": "Step 13 · KPIs, per person",
+   "min_ms": 5000
+  },
+  {
+   "id": "arabic",
+   "scene": "arabic",
+   "lang": "ar",
+   "text": "مرحباً Jordan، سجّلنا طلبك، وMaya يتابعه الآن.",
+   "caption": "Replies in the client's language, right to left",
+   "lead_ms": 500
+  },
+  {
+   "id": "next",
+   "scene": "next",
+   "text": "Coming next: a desktop console, and One, a voice teammate.",
+   "caption": "Coming next · All for One Desktop and Team Voice AI"
+  },
+  {
+   "id": "voiceai",
+   "scene": "voiceai",
+   "caption": "One · AI teammate in All for One Desktop · powered by Claude · hands-free, interruptible, confirms before acting",
+   "tail_ms": 700,
+   "clips": [
+    {
+     "id": "one1",
+     "text": "Morning, Maya — three approvals are waiting, one is urgent.",
+     "gap_ms": 300
+    },
+    {
+     "id": "one2",
+     "text": "It's Northwind's stock fix. The draft scored 0.9 — want me to read it?",
+     "gap_ms": 2200,
+     "cut_ms": 1000
+    },
+    {
+     "id": "one3",
+     "text": "Approving needs your tap — I've opened it for you.",
+     "gap_ms": 1400
+    }
+   ]
+  },
+  {
+   "id": "end",
+   "scene": "end",
+   "text": "Open source, Apache two point zero. Star us on GitHub.",
+   "caption": "Open source · Apache-2.0"
+  }
+ ]
+}
