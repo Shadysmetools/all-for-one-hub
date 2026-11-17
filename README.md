@@ -230,3 +230,7 @@ If you want a **hosted version, custom integrations or priority support**, open 
 - [Meta WhatsApp Cloud API](https://developers.facebook.com/docs/whatsapp/cloud-api), [Telegram Bot API](https://core.telegram.org/bots/api) and [Odoo](https://www.odoo.com/)
 - [Groq](https://groq.com/) Whisper, [Anthropic Claude](https://www.anthropic.com/), [Google Gemini](https://ai.google.dev/) and [ElevenLabs](https://elevenlabs.io/)
 - [Tauri](https://tauri.app/) and [SQLite](https://sqlite.org/)
+
+---
+
+**Built by [Shady Al-Halawani](https://github.com/Shadysmetools)**, AI Product Manager & Tech Lead · [LinkedIn](https://www.linkedin.com/in/shady-al-halawani-333a5419a) · [Book a call](https://calendly.com/shady-al-halawani)
